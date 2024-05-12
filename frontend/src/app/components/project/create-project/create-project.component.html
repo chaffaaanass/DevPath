@@ -1,0 +1,16 @@
+<form (submit)="createProject()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="newProject.name" required>
+  
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="newProject.description" required></textarea>
+
+    <label for="deadline">Deadline:</label>
+    <textarea id="deadline" name="deadline" [(ngModel)]="newProject.deadline" required></textarea>
+
+    <label for="module">Module:</label>
+    <textarea id="module" name="module" [(ngModel)]="newProject.module.title" required></textarea>
+    
+    <button type="submit">Create Project</button>
+  </form>
+  

@@ -1,0 +1,17 @@
+<div *ngIf="assignment">
+    <h2>Update Assignment</h2>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="assignment.title">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="assignment.description"></textarea>
+
+    <label for="deadline">Deadline:</label>
+    <textarea id="deadline" name="deadline" [(ngModel)]="assignment.deadline" required></textarea>
+
+    <label for="module">Module:</label>
+    <textarea id="module" name="module" [(ngModel)]="assignment.module.title" required></textarea>
+
+    <button (click)="updateAssignment(assignment.id)">Update Assignment</button>
+</div>
+  

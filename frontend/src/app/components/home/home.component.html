@@ -1,0 +1,24 @@
+<section class="home" id="home">
+    <div class="home-content">
+        <h1>Welcome To <span>DevPath</span></h1>
+        <p>DevPath is your comprehensive platform roadmap tailored specifically for aspiring and seasoned developers alike, offering a guided journey through both frontend and backend development landscapes. Whether you're delving into the world of web development or seeking to enhance your existing skills, DevPath equips you with the essential tools and resources to navigate your path with confidence.</p>
+        <div class="btn-group">
+            <a href="/courses" class="btn">Courses</a>
+            <a href="/modules" class="btn">Modules</a>
+        </div>
+    </div>
+        <div class="home-img">
+            <img src="../../../assets/images/image.png" alt="">
+        </div>
+</section>
+<section class="courses" id="courses">
+    <h2 class="heading">Courses</h2>
+    <div class="courses-container" >
+        <div class="course-box" *ngFor="let course of courses">
+            <a [routerLink]="['/courses', course.id]"  class="course-info">
+                <h4>{{ course.title }}</h4>
+                <p>{{ course.description }}</p>
+            </a>
+        </div>
+    </div>
+</section>

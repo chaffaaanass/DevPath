@@ -1,0 +1,17 @@
+<header class="header">
+    <a href="" class="logo">Dev
+        <span>Path</span>
+    </a>
+    <nav class="navbar">
+        <a href="/" class="active">Home</a>
+        <a href="/courses">Courses</a>
+        <a href="/modules">Modules</a>
+        <ng-container *ngIf="isAuthenticated; else notAuthenticated">
+            <a href="" (click)="logout()">Logout</a>
+        </ng-container>
+        <ng-template #notAuthenticated>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </ng-template>
+    </nav>
+</header>

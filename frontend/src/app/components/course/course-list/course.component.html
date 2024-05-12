@@ -1,0 +1,11 @@
+<section class="courses" id="courses">
+  <h2 class="heading">Courses</h2>
+  <div class="courses-container" >
+      <div class="course-box" *ngFor="let course of courses">
+          <a [routerLink]="['/courses', course.id]"  class="course-info">
+              <h4>{{ course.title }}</h4>
+              <p>{{ course.description }}</p>
+          </a>
+      </div>
+  </div>
+</section>

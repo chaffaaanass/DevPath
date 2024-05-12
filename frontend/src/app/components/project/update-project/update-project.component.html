@@ -1,0 +1,17 @@
+<div *ngIf="project">
+    <h2>Update Project</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="project.name">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="project.description"></textarea>
+
+    <label for="deadline">Deadline:</label>
+    <textarea id="deadline" name="deadline" [(ngModel)]="project.deadline" required></textarea>
+
+    <label for="module">Module:</label>
+    <textarea id="module" name="module" [(ngModel)]="project.module.title" required></textarea>
+
+    <button (click)="updateProject(project.id)">Update Project</button>
+</div>
+  

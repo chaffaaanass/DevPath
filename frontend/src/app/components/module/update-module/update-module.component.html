@@ -1,0 +1,12 @@
+<section class="modules">
+    <div *ngIf="module">
+        <h2>Update Module</h2>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="module.title">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="module.description"></textarea>
+        <button (click)="updateModule(module.id)">Update Module</button>
+    </div>
+</section>
+
+  

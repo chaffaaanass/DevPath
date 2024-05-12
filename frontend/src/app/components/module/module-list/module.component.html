@@ -1,0 +1,14 @@
+<section class="modules" id="modules">
+  <h2 class="heading">Modules</h2>
+  <div class="modules-container">
+    <div class="module-box" *ngFor="let module of modules">
+      <a [routerLink]="['/modules', module.id]" class="module-info">
+        <h4>{{ module.title }}</h4>
+        <p>{{ module.description }}</p>
+        <button (click)="updateModule(module.id)">Update</button>
+             <!-- <button (click)="deleteModule(module.id)">Delete</button>
+              <button (click)="createModule()">Create</button>-->
+      </a>
+    </div>
+  </div>
+</section>

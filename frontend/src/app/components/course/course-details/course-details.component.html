@@ -1,0 +1,22 @@
+<section class="courses" id="courses" *ngIf="course">
+  <h2 class="heading">{{ course.title }}</h2>
+  <div class="courses-container">
+    <div class="course-box">
+      <a [routerLink]="['/courses', course.id]" class="course-info">
+        <p>{{ course.description }}</p>
+        <button (click)="enrollCourse()">Enroll Now</button>
+
+        <!--<button (click)="updateCourse(course.id)">Update</button>
+          <button (click)="deleteCourse(course.id)">Delete</button>-->
+      </a>
+    </div>
+    <div class="modules-container">
+      <div class="module-box" *ngFor="let module of course.modules">
+        <div class="module-info">
+          <h3>{{ module.title }}</h3>
+          <p>{{ module.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

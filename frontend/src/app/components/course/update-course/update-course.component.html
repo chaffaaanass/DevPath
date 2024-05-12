@@ -1,0 +1,9 @@
+<div *ngIf="course">
+    <h2>Update Course</h2>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="course.title">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="course.description"></textarea>
+    <button (click)="updateCourse(course.id)">Update Course</button>
+</div>
+  

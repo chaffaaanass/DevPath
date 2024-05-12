@@ -1,0 +1,16 @@
+<form (submit)="createAssignment()">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="newAssignment.title" required>
+  
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="newAssignment.description" required></textarea>
+
+    <label for="deadline">Deadline:</label>
+    <textarea id="deadline" name="deadline" [(ngModel)]="newAssignment.deadline" required></textarea>
+
+    <label for="module">Module:</label>
+    <textarea id="module" name="module" [(ngModel)]="newAssignment.module.title" required></textarea>
+    
+    <button type="submit">Create Assignment</button>
+  </form>
+  

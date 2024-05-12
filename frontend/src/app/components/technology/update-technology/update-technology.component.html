@@ -1,0 +1,9 @@
+<div *ngIf="technology">
+    <h2>Update Technology</h2>
+    <label for="name">Title:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="technology.name">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="technology.description"></textarea>
+    <button (click)="updateTechnology(technology.id)">Update Technology</button>
+</div>
+  

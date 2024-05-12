@@ -1,0 +1,13 @@
+<ul>
+    <button (click)="createTechnology()">Create</button>
+      <li *ngFor="let technology of technologies">
+        <a [routerLink]="['/technologies', technology.id]">{{ technology.name }} - {{ technology.description }}</a>
+        <button (click)="updateTechnology(technology.id)">Update</button>
+        <button (click)="deleteTechnology(technology.id)">Delete</button>
+        <div *ngFor="let module of technology.modules">
+          <h3>{{ module.title }}</h3>
+          <p>{{ module.description }}</p>
+        </div>
+      </li>
+    </ul>
+    

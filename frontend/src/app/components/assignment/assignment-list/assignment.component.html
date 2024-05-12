@@ -1,0 +1,11 @@
+<ul>
+    <button (click)="createAssignment()">Create</button>
+      <li *ngFor="let assignment of assignments">
+        <a [routerLink]="['/assignments', assignment.id]">{{ assignment.title }} - {{ assignment.description }}</a>
+        <button (click)="updateAssignment(assignment.id)">Update</button>
+        <button (click)="deleteAssignment(assignment.id)">Delete</button>
+        
+        
+      </li>
+    </ul>
+    

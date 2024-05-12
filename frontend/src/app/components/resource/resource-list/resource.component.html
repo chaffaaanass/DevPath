@@ -1,0 +1,11 @@
+<ul>
+    <button (click)="createResource()">Create</button>
+      <li *ngFor="let resource of resources">
+        <a [routerLink]="['/resources', resource.id]">{{ resource.title }} - {{ resource.description }}</a>
+        <button (click)="updateResource(resource.id)">Update</button>
+        <button (click)="deleteResource(resource.id)">Delete</button>
+        
+        
+      </li>
+    </ul>
+    
